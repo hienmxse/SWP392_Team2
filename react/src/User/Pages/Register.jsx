@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, Form, Grid, Input, theme, Typography } from "antd";
-
-import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
+import { Button, Form, Grid, Input, Select, theme, Typography } from "antd";
+import { LockOutlined, MailOutlined, UserOutlined, HomeOutlined } from "@ant-design/icons";
 
 const { useToken } = theme;
 const { useBreakpoint } = Grid;
 const { Text, Title, Link } = Typography;
+const { Option } = Select;
 
 const Register = () => {
   const { token } = useToken();
@@ -119,6 +119,32 @@ const Register = () => {
               type="password"
               placeholder="Password"
             />
+          </Form.Item>
+          <Form.Item
+            name="address"
+            rules={[
+              {
+                required: true,
+                message: "Please input your Address!",
+              },
+            ]}
+          >
+            <Input prefix={<HomeOutlined />} placeholder="Address" />
+          </Form.Item>
+          <Form.Item
+            name="gender"
+            rules={[
+              {
+                required: true,
+                message: "Please select your Gender!",
+              },
+            ]}
+          >
+            <Select placeholder="Select Gender">
+              <Option value="male">Male</Option>
+              <Option value="female">Female</Option>
+              <Option value="other">Other</Option>
+            </Select>
           </Form.Item>
           <Form.Item style={{ marginBottom: "0px" }}>
             <Button block type="primary" htmlType="submit">
