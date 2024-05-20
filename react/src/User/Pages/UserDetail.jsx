@@ -10,22 +10,29 @@ const user = {
     email: "john.doe@example.com",
     phone: "+1234567890",
     address: "123 Main Street, Springfield, USA",
-    avatar: "https://via.placeholder.com/150",
+    avatar: "https://images.fpt.shop/unsafe/filters:quality(5)/fptshop.com.vn/uploads/images/tin-tuc/183241/Originals/nahida%201.png",
   };
+
+
+  // const items = [
+  //   {
+  //     key: '1',
+  //     icon: <UserOutlined />,
+  //     label: 'Profile',
+  //   },
+  //   {
+  //     key: '2',
+  //     icon: <SettingOutlined />,
+  //     label: 'Settings',
+  //   },
+  // ];
 
 const UserDetail = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Sider>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-          <Menu.Item key="1" icon={<UserOutlined />}>
-            Profile
-          </Menu.Item>
-          <Menu.Item key="2" icon={<SettingOutlined />}>
-            Settings
-          </Menu.Item>
-        </Menu>
-      </Sider>
+      {/* <Sider>
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} items={items} />
+      </Sider> */}
       <Layout>
         <Header style={{ background: '#fff', padding: 0 }}>
           <Title level={3} style={{ margin: '16px' }}>User Profile</Title>
@@ -55,6 +62,7 @@ const UserDetail = () => {
         </Content>
       </Layout>
     </Layout>
+   
   )
 }
 

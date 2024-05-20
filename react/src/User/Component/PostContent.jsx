@@ -28,6 +28,7 @@ const posts = [
     content: "This is yet another sample post content with an image.",
     image: "https://via.placeholder.com/600x400",
   },
+  
 ];
 
 const PostContent = () => {
