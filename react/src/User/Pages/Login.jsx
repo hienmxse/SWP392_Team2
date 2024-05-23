@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Checkbox, Form, Grid, Input, theme, Typography } from "antd";
 
 import { LockOutlined, MailOutlined } from "@ant-design/icons";
+import {NavLink } from "react-router-dom";
 
 const { useToken } = theme;
 const { useBreakpoint } = Grid;
@@ -131,7 +132,7 @@ const Login = () => {
             </Button>
             <div style={styles.footer}>
               <Text style={styles.text}>Don't have an account?</Text>{" "}
-              <Link href="">Sign up now</Link>
+              <NavLink to="/register">Sign up now</NavLink>
             </div>
           </Form.Item>
         </Form>
