@@ -2,6 +2,7 @@ import React from "react";
 import "../../index.css";
 import { MailOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { Avatar, Badge } from "antd";
+import Modal from "./Modal";
 
 const posts = [
   {
@@ -28,7 +29,6 @@ const posts = [
     content: "This is yet another sample post content with an image.",
     image: "https://via.placeholder.com/600x400",
   },
-  
 ];
 
 const PostContent = () => {
@@ -59,10 +59,14 @@ const PostContent = () => {
             <div className="card-footer d-flex justify-content-around">
               <a href="#">
                 <Badge count={1}>
-                  <Avatar shape="square" size="large" icon={<MailOutlined/>}/>
+                  <Avatar shape="square" size="large" icon={<MailOutlined />} />
                 </Badge>
               </a>
-              <button className="btn btn-warning">
+              <button
+                className="btn btn-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalId"
+              >
                 <EditOutlined />
               </button>
               <button className="btn btn-danger">
@@ -72,6 +76,7 @@ const PostContent = () => {
           </div>
         </div>
       ))}
+      <Modal></Modal>
     </div>
   );
 };

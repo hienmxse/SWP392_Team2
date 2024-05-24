@@ -12,6 +12,8 @@ import AdminHome from "./Admin/Pages/AdminHome.jsx";
 
 import HomeDashBoard from "./Admin/Pages/HomeDashBoard.jsx";
 import UserTable from "./Admin/Pages/UserTable.jsx";
+import Modal from "./User/Component/Modal.jsx";
+import CreatePost from "./User/Pages/CreatePost.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -20,9 +22,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home></Home>}>
-          <Route path="post-content" element={<PostContent></PostContent>}></Route>
+          <Route path="" element={<PostContent></PostContent>}></Route>
           <Route path="user-detail" element={<UserDetail></UserDetail>}></Route>
           <Route path="appointment-schedule" element={<AppointmentSchedule></AppointmentSchedule>}></Route>
+          <Route path="create-post" element={<CreatePost></CreatePost>}></Route>
         </Route>
         <Route path="admin" element={<AdminHome></AdminHome>} >
           
@@ -30,6 +33,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="user-table" element={<UserTable></UserTable>}></Route>
 
         </Route>
+        <Route path="modal" element={<Modal></Modal>}></Route>
+
 
       </Routes>
     </BrowserRouter>

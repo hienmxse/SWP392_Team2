@@ -4,6 +4,7 @@ import {
     HomeOutlined,
     ScheduleOutlined,
     SettingOutlined,
+    PlusOutlined,
   } from "@ant-design/icons";
 import MyHeader from '../Component/MyHeader';
 import Footer from '../Component/Footer';
@@ -12,7 +13,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 
 const items = [
     {
-      key: "post-content",
+      key: "",
       label: "Home",
       icon: <HomeOutlined />,
     },
@@ -44,6 +45,11 @@ const items = [
       //     ],
       //   },
       // ],
+    },
+    {
+      key: "create-post",
+      label: "Create Post",
+      icon: <PlusOutlined />,
     },
     {
       type: "divider",
