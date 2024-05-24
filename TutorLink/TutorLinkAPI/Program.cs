@@ -1,5 +1,8 @@
 using DataLayer.DAL;
+using DataLayer.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
+using TutorLinkAPI.BusinessLogics.IServices;
+using TutorLinkAPI.BusinessLogics.Services;
 
 namespace TutorLinkAPI
 {
@@ -20,6 +23,33 @@ namespace TutorLinkAPI
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Local"));
             });
+            
+            #region Repositories
+            builder.Services.AddScoped(typeof(GenericRepository<>));
+            builder.Services.AddScoped<AccountRepository>();
+            builder.Services.AddScoped<ApplyRepository>();
+            builder.Services.AddScoped<AppointmentRepository>();
+            builder.Services.AddScoped<ParentFeedbackRepository>();
+            builder.Services.AddScoped<PostRequestRepository>();
+            builder.Services.AddScoped<QualificationRepository>();
+            builder.Services.AddScoped<RoleRepository>();
+            builder.Services.AddScoped<TutorRepository>();
+            builder.Services.AddScoped<WalletRepository>();
+            builder.Services.AddScoped<WalletTransactionRepository>();
+            #endregion
+            
+            #region Interfaces + Services
+            builder.Services.AddScoped<IAccountService, AccountServiceServices>();
+            builder.Services.AddScoped<IApplyService, ApplyServiceServices>();
+            builder.Services.AddScoped<IAppointmentService, AppointmentServices>();
+            builder.Services.AddScoped<IParentFeedbackService, ParentFeedbackServices>();
+            builder.Services.AddScoped<IPostRequestService, PostRequestServices>();
+            builder.Services.AddScoped<IQualificationService, QualificationServices>();
+            builder.Services.AddScoped<IRoleService, RoleServices>();
+            builder.Services.AddScoped<ITutorService, TutorServices>();
+            builder.Services.AddScoped<IWalletService, WalletServices>();
+            builder.Services.AddScoped<IWalletTransactionService, WalletTransactionServices>();
+            #endregion
             
             var app = builder.Build();
 
