@@ -4,7 +4,6 @@ import {
     HomeOutlined,
     ScheduleOutlined,
     SettingOutlined,
-    PlusOutlined,
   } from "@ant-design/icons";
 import MyHeader from '../Component/MyHeader';
 import Footer from '../Component/Footer';
@@ -46,11 +45,7 @@ const items = [
       //   },
       // ],
     },
-    {
-      key: "create-post",
-      label: "Create Post",
-      icon: <PlusOutlined />,
-    },
+    
     {
       type: "divider",
     },

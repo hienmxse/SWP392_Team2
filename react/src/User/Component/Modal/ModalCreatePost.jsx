@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-const Modal = () => {
+const ModalCreatePost = () => {
   return (
     <div>
       {/* Modal trigger button */}
@@ -8,7 +8,7 @@ const Modal = () => {
         type="button"
         className="btn btn-primary btn-lg"
         data-bs-toggle="modal"
-        data-bs-target="#modalId"
+        data-bs-target="#modalIdCreatePost"
         style={{ display: "none" }}
       >
         Launch
@@ -17,7 +17,7 @@ const Modal = () => {
       {/* if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard */}
       <div
         className="modal fade"
-        id="modalId"
+        id="modalIdCreatePost"
         tabIndex={-1}
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -32,7 +32,7 @@ const Modal = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="modalTitleId">
-                Post Infomation
+                Create Post
               </h5>
               <button
                 type="button"
@@ -48,8 +48,7 @@ const Modal = () => {
                   <input
                     type="text"
                     className="form-control"
-                    id="postId"
-                    value=''                   
+                    id="postId"                  
                   />
                 </div>
                 <div className="form-group mb-3"> {/* Thêm lớp mb-3 ở đây */}
@@ -57,8 +56,7 @@ const Modal = () => {
                   <input
                     type="text"
                     className="form-control"
-                    id="description"
-                    value=''          
+                    id="description"         
                   />
                 </div>
                 <div className="form-group mb-3"> {/* Thêm lớp mb-3 ở đây */}
@@ -66,8 +64,7 @@ const Modal = () => {
                   <input
                     type="text"
                     className="form-control"
-                    id="address"
-                    value=''          
+                    id="address"       
                   />
                 </div>
                 <div className="form-group mb-3"> {/* Thêm lớp mb-3 ở đây */}
@@ -75,8 +72,7 @@ const Modal = () => {
                   <input
                     type="text"
                     className="form-control"
-                    id="schedule"
-                    value=''          
+                    id="schedule"         
                   />
                 </div>
               </form>
@@ -98,7 +94,7 @@ const Modal = () => {
       </div>
       {/* Optional: Place to the bottom of scripts */}
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default ModalCreatePost

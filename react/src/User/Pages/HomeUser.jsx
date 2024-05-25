@@ -6,14 +6,9 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import UserInfo from "./User/Component/UserInfo";
+
 import HomeUser from "./User/Pages/HomeUser";
-import UserDetail from "./User/Pages/UserDetail";
-import AppointmentSchedule from "./User/Pages/AppointmentSchedule";
 
-
-import PostContent from "./User/Component/PostContent";
 import MyHeader from "../Component/MyHeader";
 import { Footer } from "antd/es/layout/layout";
 
