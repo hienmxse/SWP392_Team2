@@ -70,6 +70,7 @@ namespace TutorLinkAPI
                 app.UseSwaggerUI();
             }
 
+            app.UseCors(CORS_CONFIG);
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
