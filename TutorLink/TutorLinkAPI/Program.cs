@@ -50,7 +50,17 @@ namespace TutorLinkAPI
             builder.Services.AddScoped<IWalletService, WalletServices>();
             builder.Services.AddScoped<IWalletTransactionService, WalletTransactionServices>();
             #endregion
-            
+
+            //CORS handler
+            var CORS_CONFIG = "_CORS_CONFIG";
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: CORS_CONFIG,
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -60,6 +70,7 @@ namespace TutorLinkAPI
                 app.UseSwaggerUI();
             }
 
+            app.UseCors(CORS_CONFIG);
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
