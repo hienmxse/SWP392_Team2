@@ -11,7 +11,8 @@ const ModalEditPost = () => {
         data-bs-target="#modalId"
         style={{ display: "none" }}
       >
-        Launchn
+        Launch
+
       </button>
       {/* Modal Body */}
       {/* if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard */}
