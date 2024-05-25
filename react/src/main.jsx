@@ -14,13 +14,14 @@ import HomeDashBoard from "./Admin/Pages/HomeDashBoard.jsx";
 import UserTable from "./Admin/Pages/UserTable.jsx";
 
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home></Home>}>
-          <Route path="post-content" element={<PostContent></PostContent>}></Route>
+          <Route path="" element={<PostContent></PostContent>}></Route>
           <Route path="user-detail" element={<UserDetail></UserDetail>}></Route>
           <Route path="appointment-schedule" element={<AppointmentSchedule></AppointmentSchedule>}></Route>
         </Route>
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="user-table" element={<UserTable></UserTable>}></Route>
 
         </Route>
+
 
       </Routes>
     </BrowserRouter>

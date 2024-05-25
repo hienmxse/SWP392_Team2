@@ -12,7 +12,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 
 const items = [
     {
-      key: "post-content",
+      key: "",
       label: "Home",
       icon: <HomeOutlined />,
     },
@@ -45,6 +45,7 @@ const items = [
       //   },
       // ],
     },
+    
     {
       type: "divider",
     },
