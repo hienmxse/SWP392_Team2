@@ -13,13 +13,14 @@ import AdminHome from "./Admin/Pages/AdminHome.jsx";
 import HomeDashBoard from "./Admin/Pages/HomeDashBoard.jsx";
 import UserTable from "./Admin/Pages/UserTable.jsx";
 
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="register" element={<Register />} />
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<AdminHome></AdminHome>}>
+        <Route path="" element={<HomeDashBoard></HomeDashBoard>}></Route>
+        <Route path="user-table" element={<UserTable></UserTable>}></Route>
+      </Route>
+      {/* <Route path="register" element={<Register />} />
         <Route path="home" element={<Home></Home>}>
           <Route path="" element={<PostContent></PostContent>}></Route>
           <Route path="user-detail" element={<UserDetail></UserDetail>}></Route>
@@ -30,9 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="" element={<HomeDashBoard></HomeDashBoard>}></Route>
           <Route path="user-table" element={<UserTable></UserTable>}></Route>
 
-        </Route>
-
-
-      </Routes>
-    </BrowserRouter>
+        </Route> */}
+    </Routes>
+  </BrowserRouter>
 );
