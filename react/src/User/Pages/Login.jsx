@@ -51,21 +51,21 @@ const Login = () => {
   };
 
 
-  useEffect(() => {
-    fetch('https://localhost:7194/Role/GetAllRoles')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log(data); // In dữ liệu ra console
-      })
-      .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://localhost:7194/Role/GetAllRoles')
+  //     .then(response => {
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok ' + response.statusText);
+  //       }
+  //       return response.json();
+  //     })
+  //     .then(data => {
+  //       console.log(data); // In dữ liệu ra console
+  //     })
+  //     .catch(error => {
+  //       console.error('There was a problem with the fetch operation:', error);
+  //     });
+  // }, []);
 
   return (
     <section style={styles.section}>
