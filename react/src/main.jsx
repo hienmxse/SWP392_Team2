@@ -12,26 +12,30 @@ import AdminHome from "./Admin/Pages/AdminHome.jsx";
 
 import HomeDashBoard from "./Admin/Pages/HomeDashBoard.jsx";
 import UserTable from "./Admin/Pages/UserTable.jsx";
+import RegisterTutor from "./User/Pages/RegisterTutor.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<AdminHome></AdminHome>}>
+      {/* <Route path="/" element={<AdminHome></AdminHome>}>
+        <Route path="" element={<HomeDashBoard></HomeDashBoard>}></Route>
+        <Route path="user-table" element={<UserTable></UserTable>}></Route>
+      </Route> */}
+      <Route path="" element={<Login></Login>} />
+      <Route path="register" element={<Register />} />
+      <Route path="registertutor" element={<RegisterTutor />} /> 
+      <Route path="home" element={<Home></Home>}>
+        <Route path="" element={<PostContent></PostContent>}></Route>
+        <Route path="user-detail" element={<UserDetail></UserDetail>}></Route>
+        <Route
+          path="appointment-schedule"
+          element={<AppointmentSchedule></AppointmentSchedule>}
+        ></Route>
+      </Route>
+      <Route path="admin" element={<AdminHome></AdminHome>}>
         <Route path="" element={<HomeDashBoard></HomeDashBoard>}></Route>
         <Route path="user-table" element={<UserTable></UserTable>}></Route>
       </Route>
-      {/* <Route path="register" element={<Register />} />
-        <Route path="home" element={<Home></Home>}>
-          <Route path="" element={<PostContent></PostContent>}></Route>
-          <Route path="user-detail" element={<UserDetail></UserDetail>}></Route>
-          <Route path="appointment-schedule" element={<AppointmentSchedule></AppointmentSchedule>}></Route>
-        </Route>
-        <Route path="admin" element={<AdminHome></AdminHome>} >
-          
-          <Route path="" element={<HomeDashBoard></HomeDashBoard>}></Route>
-          <Route path="user-table" element={<UserTable></UserTable>}></Route>
-
-        </Route> */}
     </Routes>
   </BrowserRouter>
 );
